@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/main.js -w src",
+    "start": "NODE_ENV=production node dist/main.js",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.10",
+    "vite": "6.3.3"
+  },
+  "dependencies": {
+    "express": "5.1.0"
+  }
+}
