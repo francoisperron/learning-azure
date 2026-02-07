@@ -14,7 +14,7 @@ az webapp create \
   --plan hello \
   --runtime "NODE:24-lts"
   
-WEBAPP_NAME=$(az webapp list --query "[0].name" -o tsv) 
+export WEBAPP_NAME=$(az webapp list --query "[0].name" -o tsv) 
 ```
 
 ## Deploy
@@ -25,5 +25,4 @@ az webapp deploy \
   --name ${WEBAPP_NAME} \
   --src-path deploy.zip \
   --type zip 
-
 ```
