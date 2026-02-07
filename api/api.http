@@ -3,3 +3,9 @@ GET http://localhost:3000/hello?name=world
 
 ### @no-log
 GET http://localhost:3000/hello
+
+### @no-log
+GET https://hello-9a59faa5-4a7f-442b-90f5-c26a3ca9d2f9.azurewebsites.net/hello?name=toi
+
+### @no-log
+GET https://hello-9a59faa5-4a7f-442b-90f5-c26a3ca9d2f9.azurewebsites.net/hello
