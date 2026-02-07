@@ -14,7 +14,10 @@ SWA_CLI_DEPLOYMENT_TOKEN=$(az staticwebapp secrets list \
   --resource-group training \
   --query "properties.apiKey" -o tsv)
   
-swa deploy dist --env production
+swa deploy dist \
+  --env production \
+  --app-name hello \
+  --resource-group training
 ```
 
 ## Add custom domain 

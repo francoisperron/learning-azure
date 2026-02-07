@@ -7,7 +7,7 @@
     "dev": "nodemon src/main.js -w src",
     "start": "NODE_ENV=production node dist/main.js",
     "build": "vite build",
-    "predeploy": "rm-rf dist deploy.zip && npm run build && zip -r deploy.zip dist node_modules package.json package-lock.json",
+    "predeploy": "rm -rf dist deploy.zip && npm run build && zip -r deploy.zip dist node_modules package.json package-lock.json",
     "deploy": "az webapp deploy --resource-group training --name $WEBAPP_NAME --src-path deploy.zip --type zip"
   },
   "devDependencies": {

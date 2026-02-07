@@ -5,6 +5,24 @@
     <title>Hello</title>
 </head>
 <body>
-Hello
+    <label for="nameInput">Name</label>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="submitBtn">Say Hello</button>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', async () => {
+            const name = document.getElementById('nameInput').value;
+            const url = `https://hello-9a59faa5-4a7f-442b-90f5-c26a3ca9d2f9.azurewebsites.net/hello?name=${encodeURIComponent(name)}`;
+
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                document.getElementById('response').textContent = text;
+            } catch (error) {
+                document.getElementById('response').textContent = 'Error: ' + error.message;
+            }
+        });
+    </script>
 </body>
 </html>
